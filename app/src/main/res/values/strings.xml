@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Up and Share</string>
+    <string name="google">Connect with Google</string>
+    <string name="subject_map">Subject Map</string>
+    <string name="math">Math</string>
+    <string name="medicine">Medicine</string>
+    <string name="default_web_client_id">34278633099-4vll46tljon5udo0o3bl5ebb5fv9nvbm.apps.googleusercontent.com</string>
+</resources>

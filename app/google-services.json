@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "34278633099",
+    "project_id": "up-and",
+    "storage_bucket": "up-and.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34278633099:android:2dd31cad80a439602dae8e",
+        "android_client_info": {
+          "package_name": "com.example.upandshare"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9npWXZUqMJUCJI1bgFQdeIEFaUiF9i5A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
