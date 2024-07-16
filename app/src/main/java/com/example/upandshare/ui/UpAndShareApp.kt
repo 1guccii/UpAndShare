@@ -25,7 +25,7 @@ fun UpAndShareApp(googleSignInHelper: GoogleSignInHelper) {
             HomeScreen()
         }
         composable(UpAndShareAppScreen.SPLASH.name) {
-            SplashScreen(googleSignInHelper = googleSignInHelper, navController = navController)
+            SplashScreen(googleSignInHelper,navController)
         }
         
     }
