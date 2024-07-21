@@ -15,11 +15,14 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.upandshare.R
+import com.example.upandshare.navigation.Screen
 
 
 @Composable
-fun BottomBar() {
+fun BottomBar(navController: NavController) {
     Row(
         horizontalArrangement = Arrangement.SpaceAround,
         modifier = Modifier
@@ -27,13 +30,13 @@ fun BottomBar() {
             .height(48.dp)
             .background(color = Color.White, shape = RoundedCornerShape(10.dp))
     ) {
-        IconButton(onClick = { /*TODO*/ }) {
+        IconButton(onClick = { navController.navigate(Screen.HOME.name) }) {
             Icon(
                 imageVector = ImageVector.vectorResource(id = R.drawable.home_icon),
                 contentDescription = ""
             )
         }
-        IconButton(onClick = { /*TODO*/ }) {
+        IconButton(onClick = { navController.navigate(Screen.UPLOAD.name) }) {
             Icon(
                 imageVector = ImageVector.vectorResource(id = R.drawable.add),
                 contentDescription = ""
@@ -45,7 +48,7 @@ fun BottomBar() {
                 contentDescription = ""
             )
         }
-        IconButton(onClick = { /*TODO*/ }) {
+        IconButton(onClick = { navController.navigate(Screen.PROFILE.name) }) {
             Icon(
                 imageVector = ImageVector.vectorResource(id = R.drawable.profile),
                 contentDescription = ""
@@ -57,5 +60,5 @@ fun BottomBar() {
 @Preview
 @Composable
 fun BottomAppBarPreview() {
-    BottomBar()
+    BottomBar(navController = rememberNavController())
 }

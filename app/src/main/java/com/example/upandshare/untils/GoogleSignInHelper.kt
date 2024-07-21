@@ -18,17 +18,15 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.auth.GoogleAuthProvider
 
 class GoogleSignInHelper(private val context: Context, private val activity: Activity) : ViewModel() {
-
     private val googleSignInClient: GoogleSignInClient
     private val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
-    var firebaseUserState = mutableStateOf<FirebaseUser?>(null)
+    private var firebaseUserState = mutableStateOf<FirebaseUser?>(null)
 
     init {
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
             .requestIdToken(context.getString(R.string.default_web_client_id))
             .requestEmail()
             .build()
-
         googleSignInClient = GoogleSignIn.getClient(context, gso)
         firebaseUserState.value = firebaseAuth.currentUser
     }

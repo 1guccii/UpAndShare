@@ -52,15 +52,18 @@ android {
 }
 
 dependencies {
-//    Navigation
+implementation(libs.androidx.runtime.livedata)
+    //    Navigation
     val nav_version = "2.7.7"
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
     implementation("androidx.navigation:navigation-ui-ktx:$nav_version")
     implementation("androidx.navigation:navigation-compose:$nav_version")
-
+    implementation("androidx.lifecycle:lifecycle-livedata-core-ktx:2.8.3")
     implementation("androidx.constraintlayout:constraintlayout-compose:1.0.1")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.8.3")
 //    Firebase
     implementation("com.google.android.gms:play-services-auth:20.1.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose-android:2.8.3")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
