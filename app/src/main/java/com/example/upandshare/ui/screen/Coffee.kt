@@ -22,10 +22,9 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.upandshare.R
-import com.example.upandshare.navigation.Screen
 import com.example.upandshare.ui.theme.Typography
-import com.example.upandshare.ui.uiComponents.ToolBar.BottomBar
-import com.example.upandshare.ui.uiComponents.ToolBar.TopBar
+import com.example.upandshare.ui.uiComponents.toolBar.BottomBar
+import com.example.upandshare.ui.uiComponents.toolBar.TopAppBar
 
 
 @Composable
@@ -41,7 +40,7 @@ fun CoffeeScreen(navController: NavController) {
                 .padding(top = 40.dp)
                 .weight(2f)
         ) {
-            TopBar(title = "Coffee", onClick = {navController.navigate(Screen.HOME.name)})
+            TopAppBar(title = "Coffee")
         }
         Column(
             modifier = Modifier.weight(6f)

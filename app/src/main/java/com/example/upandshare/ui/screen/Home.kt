@@ -17,10 +17,11 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.upandshare.R
 import com.example.upandshare.ui.theme.Typography
-import com.example.upandshare.ui.uiComponents.Button.Payment.DonateButton
-import com.example.upandshare.ui.uiComponents.ToolBar.BottomBar
-import com.example.upandshare.ui.uiComponents.ToolBar.SearchBar
+import com.example.upandshare.ui.uiComponents.button.Payment.DonateButton
+import com.example.upandshare.ui.uiComponents.toolBar.BottomBar
+import com.example.upandshare.ui.uiComponents.toolBar.SearchBar
 import com.example.upandshare.ui.uiComponents.UserBox
 
 @Composable
@@ -58,14 +59,14 @@ fun HomeScreen(navController: NavController) {
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(30.dp)
                 ) {
-                    UserBox(num = 12, infor = "User")
-                    UserBox(num = 12, infor = "Upload")
+                    UserBox(num = 100, infor = "User", idIcon = R.drawable.user)
+                    UserBox(num = 0, infor = "Upload", idIcon = R.drawable.upload_3)
                 }
                 Row(
                     horizontalArrangement = Arrangement.spacedBy(30.dp)
                 ) {
-                    UserBox(num = 12, infor = "Download")
-                    UserBox(num = 12, infor = "Share")
+                    UserBox(num = 0, infor = "Download", idIcon = R.drawable.image)
+                    UserBox(num = 0, infor = "Share", idIcon = R.drawable.share)
                 }
             }
             Spacer(modifier = Modifier.weight(1f))

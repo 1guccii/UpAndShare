@@ -9,7 +9,7 @@
             <InsightsFilterSettings>
               <option name="connection">
                 <ConnectionSetting>
-                  <option name="appId" value="com.example.upandshare" />
+                  <option name="appId" value="com.1gucci.upandshare" />
                   <option name="mobileSdkAppId" value="1:34278633099:android:2dd31cad80a439602dae8e" />
                   <option name="projectId" value="up-and" />
                   <option name="projectNumber" value="34278633099" />

@@ -6,5 +6,6 @@ enum class Screen {
     PROFILE,
     SEARCH,
     SPLASH,
-    UPLOAD
+    UPLOAD,
+    FOLDER
 }

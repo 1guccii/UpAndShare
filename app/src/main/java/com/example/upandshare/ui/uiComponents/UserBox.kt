@@ -1,6 +1,5 @@
 package com.example.upandshare.ui.uiComponents
 
-import android.graphics.Color
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -21,7 +20,7 @@ import com.example.upandshare.R
 import com.example.upandshare.ui.theme.Typography
 
 @Composable
-fun UserBox(num:Int, infor: String) {
+fun UserBox(num:Int, infor: String, idIcon: Int) {
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
@@ -30,7 +29,7 @@ fun UserBox(num:Int, infor: String) {
             .height(180.dp)
             .background(color = androidx.compose.ui.graphics.Color.White, shape = RoundedCornerShape(10.dp))
     ) {
-        Icon(imageVector = ImageVector.vectorResource(id = R.drawable.user), contentDescription = null)
+        Icon(imageVector = ImageVector.vectorResource(id = idIcon), contentDescription = null)
         Spacer(modifier = Modifier.height(16.dp))
         Text(text = num.toString(), style = Typography.headlineMedium)
         Spacer(modifier = Modifier.height(16.dp))
@@ -41,5 +40,5 @@ fun UserBox(num:Int, infor: String) {
 @Preview
 @Composable
 fun UserBoxPreview() {
-    UserBox(5,"User")
+    UserBox(5, idIcon = R.drawable.user, infor = "User")
 }

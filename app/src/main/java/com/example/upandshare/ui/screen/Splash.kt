@@ -18,7 +18,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.upandshare.navigation.Screen
-import com.example.upandshare.ui.uiComponents.Button.ConnectButton.ConnectGoogleButton
+import com.example.upandshare.ui.uiComponents.button.connectButton.ConnectGoogleButton
 import com.example.upandshare.ui.theme.Typography
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 
@@ -51,10 +51,11 @@ fun SplashScreen(googleSignInHelper: GoogleSignInHelper, navController: NavContr
                 style = Typography.headlineLarge,
             )
         }
-        ConnectGoogleButton(onClick = {googleSignInHelper.signIn(launcher).apply {
-            navController.navigate(Screen.HOME.name)
+        ConnectGoogleButton(onClick = { googleSignInHelper.signIn(launcher).let {
+            navController.navigate(Screen.HOME.name) {
+                popUpToRoute
             }
-        }
+        } }
         )
     }
 }

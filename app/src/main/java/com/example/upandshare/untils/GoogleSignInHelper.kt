@@ -20,7 +20,7 @@ import com.google.firebase.auth.GoogleAuthProvider
 class GoogleSignInHelper(private val context: Context, private val activity: Activity) : ViewModel() {
     private val googleSignInClient: GoogleSignInClient
     private val firebaseAuth: FirebaseAuth = FirebaseAuth.getInstance()
-    private var firebaseUserState = mutableStateOf<FirebaseUser?>(null)
+    var firebaseUserState = mutableStateOf<FirebaseUser?>(null)
 
     init {
         val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -51,6 +51,7 @@ class GoogleSignInHelper(private val context: Context, private val activity: Act
             .addOnCompleteListener(activity) { authTask ->
                 if (authTask.isSuccessful) {
                     firebaseUserState.value = firebaseAuth.currentUser
+
                 } else {
                     firebaseUserState.value = null
                 }

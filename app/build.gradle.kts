@@ -10,7 +10,7 @@ android {
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.upandshare"
+        applicationId = "com.1gucci.upandshare"
         minSdk = 30
         targetSdk = 34
         versionCode = 1

@@ -16,10 +16,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.example.upandshare.navigation.Screen
-import com.example.upandshare.ui.uiComponents.Button.Information
-import com.example.upandshare.ui.uiComponents.ToolBar.BottomBar
-import com.example.upandshare.ui.uiComponents.ToolBar.TopBar
+import com.example.upandshare.ui.uiComponents.Feature
+import com.example.upandshare.ui.uiComponents.toolBar.BottomBar
+import com.example.upandshare.ui.uiComponents.toolBar.TopAppBar
 
 @Composable
 fun ProfileScreen(navController: NavController) {
@@ -30,22 +29,23 @@ fun ProfileScreen(navController: NavController) {
     ) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
-            modifier = Modifier.weight(3f)
+            modifier = Modifier.weight(2f)
         ) {
             Row(
                 modifier = Modifier
                     .padding(top = 40.dp)
-                    .weight(3f)
+                    .weight(2f)
             ) {
-                TopBar(title = "Profile", onClick = {navController.navigate(Screen.HOME.name)})
+                TopAppBar(title = "Profile")
             }
-            Information(name = "1Gucci", gmail = "jandyz.dev@gmail.com")
             Spacer(modifier = Modifier.weight(1f))
         }
         Column(
-            modifier = Modifier.weight(5f)
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally,
+            modifier = Modifier.weight(6f)
         ) {
-
+            Feature()
 
         }
         Column(

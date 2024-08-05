@@ -13,7 +13,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.example.upandshare.ui.uiComponents.ToolBar.BottomBar
+import com.example.upandshare.ui.uiComponents.toolBar.BottomBar
 
 @Composable
 fun BaselineLayout(navController: NavController) {

@@ -9,10 +9,15 @@
       "client_info": {
         "mobilesdk_app_id": "1:34278633099:android:2dd31cad80a439602dae8e",
         "android_client_info": {
-          "package_name": "com.example.upandshare"
+          "package_name": "com.1gucci.upandshare"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "34278633099-4vll46tljon5udo0o3bl5ebb5fv9nvbm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyD9npWXZUqMJUCJI1bgFQdeIEFaUiF9i5A"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34278633099-4vll46tljon5udo0o3bl5ebb5fv9nvbm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

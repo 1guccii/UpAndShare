@@ -65,6 +65,11 @@ val Typography = Typography(
         fontFamily = FontFamily(Poppin_bold),
         fontWeight = FontWeight(600),
         color = Color(0xFF000000),
-
+        ),
+    labelSmall = TextStyle(
+        fontSize = 14.sp,
+        fontFamily = FontFamily(Poppin_Medium),
+        fontWeight = FontWeight(600),
+        color = Color(0xFF000000),
         )
 )

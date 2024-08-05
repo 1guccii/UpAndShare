@@ -1,6 +1,5 @@
 package com.example.upandshare.ui.screen
 
-import android.net.Uri
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -10,7 +9,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
@@ -26,17 +27,12 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.upandshare.R
-import com.example.upandshare.navigation.Screen
 import com.example.upandshare.ui.theme.Typography
-import com.example.upandshare.ui.uiComponents.ToolBar.BottomBar
-import com.example.upandshare.ui.uiComponents.ToolBar.TopBar
-import com.example.upandshare.untils.FirebaseStorageHelper
+import com.example.upandshare.ui.uiComponents.toolBar.BottomBar
+import com.example.upandshare.ui.uiComponents.toolBar.TopAppBar
 
 @Composable
 fun UploadScreen(navController: NavController) {
-
-    val firebaseStorageHelper: FirebaseStorageHelper
-
     Column(
         modifier = Modifier
             .fillMaxSize(1f)
@@ -48,7 +44,7 @@ fun UploadScreen(navController: NavController) {
                 .weight(2f)
                 .fillMaxWidth(1f)
         ) {
-            TopBar(title = "Upload", onClick = {Screen.HOME.name})
+            TopAppBar(title = "Upload")
         }
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -62,15 +58,16 @@ fun UploadScreen(navController: NavController) {
                 modifier = Modifier
                     .width(300.dp)
                     .height(150.dp)
-                    .background(color = Color.White)
+                    .background(color = Color.White, shape = RoundedCornerShape(10.dp))
             ) {
                 Column(
                     horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     IconButton(onClick = {}) {
                         Icon(
-                            imageVector = ImageVector.vectorResource(id = R.drawable.upload),
-                            contentDescription = null
+                            imageVector = ImageVector.vectorResource(id = R.drawable.upload_3),
+                            contentDescription = null,
+                            modifier = Modifier.size(24.dp)
                         )
                     }
                     Spacer(modifier = Modifier.height(25.dp))
